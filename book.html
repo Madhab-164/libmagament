@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Collection</title>
+    <style>
+        .book-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around; /* Center and space out books */
+        }
+        .book {
+            margin: 15px; /* Increase space between books */
+            text-align: center; /* Center text under book cover */
+        }
+        img {
+            max-width: 100%; /* Responsive image */
+            height: auto; /* Maintain aspect ratio */
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align: center;">Book Collection</h1>
+
+    <div class="book-container">
+        <!-- Repeat this block for each book -->
+        <div class="book">
+            <img src="data:image/jpeg;base64,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" alt="Book Cover">
+            <p></p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Another Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Third Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Fourth Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Fifth Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Sixth Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Seventh Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Eighth Author</p>
+        </div>
+        <!-- Repeat as needed for more books -->
+    </div>
+
+    <div class="book-container">
+        <!-- Repeat this block for each book -->
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Author Name</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Another Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Third Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Fourth Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Fifth Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Sixth Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Seventh Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Eighth Author</p>
+        </div>
+        <!-- Repeat as needed for more books -->
+    </div>
+
+
+    <div class="book-container">
+        <!-- Repeat this block for each book -->
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Author Name</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Another Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Third Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Fourth Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Fifth Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Sixth Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Seventh Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Eighth Author</p>
+        </div>
+        <!-- Repeat as needed for more books -->
+    </div>
+
+
+    <div class="book-container">
+        <!-- Repeat this block for each book -->
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Author Name</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Another Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Third Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Fourth Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Fifth Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Sixth Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Seventh Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Eighth Author</p>
+        </div>
+        <!-- Repeat as needed for more books -->
+    </div>
+
+
+    <div class="book-container">
+        <!-- Repeat this block for each book -->
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Author Name</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Another Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Third Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Fourth Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Fifth Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Sixth Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Seventh Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Eighth Author</p>
+        </div>
+        <!-- Repeat as needed for more books -->
+    </div>
+
+
+    <div class="book-container">
+        <!-- Repeat this block for each book -->
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Author Name</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Another Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Third Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Fourth Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Fifth Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Sixth Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Seventh Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Eighth Author</p>
+        </div>
+        <!-- Repeat as needed for more books -->
+    </div>
+
+
+    <div class="book-container">
+        <!-- Repeat this block for each book -->
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Author Name</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Another Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Third Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Fourth Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Fifth Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Sixth Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Seventh Author</p>
+        </div>
+        <div class="book">
+            <img src="https://via.placeholder.com/150" alt="Book Cover">
+            <p>Eighth Author</p>
+        </div>
+        <!-- Repeat as needed for more books -->
+    </div>
+
+    
+
+</body>
+</html>
