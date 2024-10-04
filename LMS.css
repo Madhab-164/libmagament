@@ -123,6 +123,10 @@
 #l:hover{
     background:linear-gradient(45deg,rgba(50,177,40, .6),rgba(255,255,255, .6));
 }
+body{
+    margin: 0;
+    padding: 0;
+}
 
 #r{
     height:450px;
@@ -131,6 +135,7 @@
     float: left;
     margin: 90px auto;
     border-radius: 7px ;
+
 
 }
 #r:hover{
